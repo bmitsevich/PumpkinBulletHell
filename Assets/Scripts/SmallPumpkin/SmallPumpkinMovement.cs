@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SmallPumpkinMovement : MonoBehaviour
 {
-    Transform rotationCenter;
+    public Transform rotationCenter;
 
     public float rotationRadius;
     public float angularSpeed;
@@ -25,6 +25,10 @@ public class SmallPumpkinMovement : MonoBehaviour
             {
                 angle = 0f;
             }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            angularSpeed *= -1;
         }
     }
 }
