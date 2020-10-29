@@ -287,9 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a50db7ba0e8744fb8cca1629147a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationCenter: {fileID: 2042768564}
+  rotationCenter: {fileID: 1241154375}
   rotationRadius: 2
-  angularSpeed: 2
+  angularSpeed: 5
   posX: 0
   posY: 0
   angle: 0
@@ -476,7 +476,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241154371}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
