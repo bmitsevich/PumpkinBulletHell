@@ -15,6 +15,6 @@ public class BigPumpkinMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed * Time.deltaTime;
+        transform.position += new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical")) * speed * Time.deltaTime;
     }
 }
