@@ -21,9 +21,8 @@ public class BigPumpkin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Hostile")
+        if (collision.tag == "Bullet")
         {
-            Destroy (collision.gameObject);
             hp -= 1;
             print(hp);
         }
