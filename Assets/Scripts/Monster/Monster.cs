@@ -17,4 +17,25 @@ public class Monster : MonoBehaviour
     {
         
     }
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		switch (col.gameObject.tag)
+		{
+
+			case "Player":
+			//	MonstersSpawnerControl.spawnAllowed = false;
+				//Instantiate (explosion, col.gameObject.transform.position, Quaternion.identity);
+				print("sup");
+				//Destroy(col.gameObject);
+				//target = null;
+				break;
+
+			case "Bullet":
+				//Instantiate (explosion, transform.position, Quaternion.identity);
+				//KillsCounter.killsNumber += 1;
+				Destroy(col.gameObject);
+				Destroy(gameObject);
+				break;
+		}
+	}
 }
