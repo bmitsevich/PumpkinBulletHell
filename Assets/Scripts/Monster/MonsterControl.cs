@@ -12,7 +12,7 @@ public class MonsterControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		target = GameObject.Find ("Cat");
+		target = GameObject.Find ("smallpumpkin");
 		rb = GetComponent<Rigidbody2D> ();
 		moveSpeed = Random.Range (1f, 3f);
 	}
@@ -28,7 +28,8 @@ public class MonsterControl : MonoBehaviour {
 
 		case "Player":
 			MonstersSpawnerControl.spawnAllowed = false;
-			//Instantiate (explosion, col.gameObject.transform.position, Quaternion.identity);
+				//Instantiate (explosion, col.gameObject.transform.position, Quaternion.identity);
+			print("sup");
 			Destroy (col.gameObject);
 			target = null;
 			break;
