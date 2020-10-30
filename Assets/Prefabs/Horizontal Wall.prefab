@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8318689909314367017}
   - component: {fileID: 3922313075265582458}
   m_Layer: 0
-  m_Name: HorizontalWall
+  m_Name: Horizontal Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8291479253606654034}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
