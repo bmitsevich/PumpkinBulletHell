@@ -9,7 +9,7 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startHp = hp;
+		hp = startHp;
     }
 
     // Update is called once per frame
@@ -34,7 +34,12 @@ public class Monster : MonoBehaviour
 				//Instantiate (explosion, transform.position, Quaternion.identity);
 				//KillsCounter.killsNumber += 1;
 				Destroy(col.gameObject);
-				Destroy(gameObject);
+				hp -= 1;
+				if (hp <= 0)
+                {
+					Destroy(gameObject);
+				}
+				
 				break;
 		}
 	}

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  startHp: 0
+  startHp: 3
 --- !u!114 &8127035163419279508
 MonoBehaviour:
   m_ObjectHideFlags: 0
