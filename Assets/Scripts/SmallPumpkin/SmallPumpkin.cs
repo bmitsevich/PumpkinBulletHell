@@ -23,7 +23,7 @@ public class SmallPumpkin : MonoBehaviour
     {
         if (collision.tag == "Hostile")
         {
-           // Destroy (collision.gameObject);
+            Destroy (collision.gameObject);
             hp -= 1;
             print(hp);
         }
