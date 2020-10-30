@@ -27,6 +27,10 @@ public class SmallPumpkin : MonoBehaviour
             hp -= 1;
             print(hp);
         }
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
