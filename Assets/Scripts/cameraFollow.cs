@@ -14,8 +14,8 @@ public class cameraFollow : MonoBehaviour {
 
     void Update ()
     {
-        transform.position = new Vector3(Mathf.Clamp(bigPumpkin.position.x, -11, 11),
-                                        (Mathf.Clamp(bigPumpkin.position.y, bottomWall.position.y, topWall.position.y)),
+        transform.position = new Vector3(Mathf.Clamp(bigPumpkin.position.x, -1.15f, 1.01f),
+                                        (Mathf.Clamp(bigPumpkin.position.y, -.8f, .07f)),
                                         (transform.position.z)
                                         );
     }
