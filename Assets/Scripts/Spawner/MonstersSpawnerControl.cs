@@ -11,7 +11,7 @@ public class MonstersSpawnerControl : MonoBehaviour {
 	public static int wave;
 	public static int numMonsters;
 	public int curMonsters;
-	public float waveTimer = 5.0f;
+	public float waveTimer = 30.0f;
 	public float timeTillWave = 0.0f;
 
 	public float timeBeforeSpawning = 1.5f;
@@ -29,7 +29,7 @@ public class MonstersSpawnerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		wave = 1;
-		numMonsters = 5;
+		numMonsters = 10;
 		curMonsters = 0;
 		spawnAllowed = true;
 		StartCoroutine(SpawnMonsters());
@@ -96,13 +96,8 @@ public class MonstersSpawnerControl : MonoBehaviour {
 					yield return new WaitForSeconds(timeBetweenEnemeis);
                 }
             }
-			/*if (GameObject.FindGameObjectsWithTag("Hostile").Length <= 0)
-            {
-				yield return new WaitForSeconds(waveTimer);
-				curMonsters = 0;
-			}
-			*/
-			
+			yield return new WaitForSeconds(waveTimer);
+			curMonsters = 0;		
         }
     }
 
