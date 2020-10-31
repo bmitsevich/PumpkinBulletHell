@@ -193,7 +193,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 1.5, y: 1, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -5658,6 +5658,11 @@ MonoBehaviour:
   monsters:
   - {fileID: 3171495682455800221, guid: 80674ac2483e7a44a80c528109636cd8, type: 3}
   - {fileID: 4799843075099810580, guid: 79bf3926b9601ae40875d2d62997f3f7, type: 3}
+  curMonsters: 0
+  waveTimer: 30
+  timeTillWave: 0
+  timeBeforeSpawning: 1.5
+  timeBetweenEnemeis: 1
 --- !u!4 &1962963884
 Transform:
   m_ObjectHideFlags: 0

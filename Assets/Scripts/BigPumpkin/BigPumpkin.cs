@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BigPumpkin : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class BigPumpkin : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            Cursor.visible = true;
+            SceneManager.LoadScene("Game Over");
         }
         
     }
