@@ -20,7 +20,8 @@ public class SmallPumpkinMovement : MonoBehaviour
         posY = rotationCenter.position.y + Mathf.Sin(angle) * rotationRadius;
         transform.position = new Vector2(posX, posY);
 
-        if (Input.GetKey("space"))
+        //if (Input.GetKey("space"))
+        if(Input.GetMouseButton(0))
         {
             angle = angle + Time.deltaTime * angularSpeed;
             if (angle >= 360f)
@@ -28,9 +29,17 @@ public class SmallPumpkinMovement : MonoBehaviour
                 angle = 0f;
             }
         }
-        if (Input.GetMouseButtonDown(1))
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    angularSpeed *= -1;
+        //}
+        if(Input.GetMouseButton(1))
         {
-            angularSpeed *= -1;
+            angle = angle + Time.deltaTime * -1 * angularSpeed;
+            if (angle >= 360f)
+            {
+                angle = 0f;
+            }
         }
     }
 }
