@@ -16,5 +16,6 @@ public class physicsBasedBigPumpkinMovement : MonoBehaviour
     {
         ProcessInputs();
         rb.velocity = new Vector2(movement.x, movement.y);
+        
     }
 }
