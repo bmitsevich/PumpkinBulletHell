@@ -22,14 +22,12 @@ public class AimedMonsterShooting : MonoBehaviour {
         Vector3 difference = target.transform.position - transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
-        print(rotationZ);
 		if (timer <= 0)
         {
             
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
-            print(rotationZ);
             fireBullet(direction, rotationZ);
             timer = cooldown;
         }
@@ -38,7 +36,6 @@ public class AimedMonsterShooting : MonoBehaviour {
 
     void fireBullet(Vector2 direction, float rotationZ)
     {
-        print(rotationZ);
         GameObject b = Instantiate(bulletResource) as GameObject;
         b.transform.position = transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
