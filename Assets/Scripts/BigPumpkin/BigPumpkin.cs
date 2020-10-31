@@ -7,10 +7,13 @@ public class BigPumpkin : MonoBehaviour
     public int starthp;
     int hp;
 
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         hp = starthp;
+        healthBar.SetMaxHealth(hp);
     }
 
     // Update is called once per frame
@@ -26,6 +29,11 @@ public class BigPumpkin : MonoBehaviour
             Destroy (collision.gameObject);
             hp -= 1;
             print(hp);
+            healthBar.SetHealth(hp);
+        }
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
         }
         
     }

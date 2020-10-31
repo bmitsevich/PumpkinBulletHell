@@ -78,12 +78,19 @@ public class BulletSpawner : MonoBehaviour
         GameObject[] spawnedBullets = new GameObject[numberOfBullets];
         for (int i = 0; i < numberOfBullets; i++)
         {
-            spawnedBullets[i] = Instantiate(bulletResource, transform);
+            //spawnedBullets[i] = Instantiate(bulletResource, transform);
             
-            var b = spawnedBullets[i].GetComponent<Bullet>();
-            b.rotation = rotations[i];
-            b.speed = bulletSpeed;
-            b.velocity = bulletVelocity;
+            //var b = spawnedBullets[i].GetComponent<Bullet>();
+            //b.rotation = rotations[i];
+            //b.speed = bulletSpeed;
+            //b.velocity = bulletVelocity;
+
+            spawnedBullets[i] = Instantiate(bulletResource) as GameObject;
+            var b = spawnedBullets[i];
+            b.transform.position = transform.position;
+            b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotations[i]);
+            b.GetComponent<Rigidbody2D>().velocity = Quaternion.Euler(0.0f, 0.0f, rotations[i]) * Vector3.right * bulletSpeed;
+
         }
         return spawnedBullets;
     }

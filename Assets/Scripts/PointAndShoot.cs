@@ -11,6 +11,10 @@ public class PointAndShoot : MonoBehaviour
 
     public float bulletSpeed = 60f;
 
+    public float cooldown;
+
+    float timer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +31,17 @@ public class PointAndShoot : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         littlepumpkin.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-        if(Input.GetMouseButtonDown(0))
+        //if(Input.GetMouseButtonDown(0))
+        if(Input.GetKey("space") && timer<=0)
         {
             print("pressing leftclic");
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             fireBullet(direction, rotationZ);
+            timer=cooldown;
         }
+        timer-=Time.deltaTime;
     }
 
     void fireBullet(Vector2 direction, float rotationZ)
