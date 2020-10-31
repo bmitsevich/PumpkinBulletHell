@@ -11,7 +11,7 @@ public class MonstersSpawnerControl : MonoBehaviour {
 	public static int wave;
 	public static int numMonsters;
 	public int curMonsters;
-	public float waveTimer = 30.0f;
+	public float waveTimer = 4f;
 	public float timeTillWave = 0.0f;
 
 	public float timeBeforeSpawning = 1.5f;
@@ -96,7 +96,7 @@ public class MonstersSpawnerControl : MonoBehaviour {
 					yield return new WaitForSeconds(timeBetweenEnemeis);
                 }
             }
-			yield return new WaitForSeconds(waveTimer);
+			yield return new WaitForSeconds(5.0f);
 			curMonsters = 0;		
         }
     }
