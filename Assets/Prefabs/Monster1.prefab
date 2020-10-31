@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8096a4c59b831a4791e24faefc93e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletResource: {fileID: 3341829059348479933, guid: 9471be797aeb96f4eac49fd8896a06d8,
+  bulletResource: {fileID: 5139464220068226530, guid: 096478a15c1ca2142af4caf33249c604,
     type: 3}
   minRotation: 1
   maxRotation: 360
